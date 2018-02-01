@@ -1,0 +1,33 @@
+.myparadiseloader{background:rgba(0, 0, 0, 0.5) none repeat scroll 0 0;bottom:0;left:0;margin:auto;position:fixed;right:0;top:0;z-index:99;}
+.customErrorClass {color: #c20000;font-weight: normal;font-size: 14px;}
+span.requiredred{color:#ff0000;font-weight: 900;}
+.imagepositionabsolute {width: 240px;height: 150px;display: inline-block;position:relative;z-index:999;border:1px solid #ddd;background:#eee;}
+.imagepositionabsolute img{position:absolute;margin:auto;left:0;right:0;top:0;bottom:0;width: auto !important;max-width: 100% !important;}
+.custominternalvariations{margin:10px 10px 25px;padding:10px 15px;;border:1px solid #dedede;}
+table.variations{display:none !important;}
+.single_variation_wrap, .woocommerce-variation-description{display:none;}
+.product-variation-image{width:240px;}
+.custompopupheading{text-transform:uppercase;}
+.tml-user-bcountry-wrap select{height: 40px;font-weight: normal;font-size: 14px;}
+.tml-user-bcountry-wrap select.customErrorClass {color: inherit;}
+.customcheck{opacity:0.5;color:#996;}
+.customulgridclass li{ transition:0.5s ease all;
+-webkit-transition:0.5s ease all;
+-moz-transition:0.5s ease all;
+-ms-transition:0.5s ease all;
+-o-transition:0.5s ease all;}
+.customulgridclass li{border:1px solid #dedede;}
+.customulgridclass li img{margin: auto !important;}
+.internaldetail{display:inline-block;width:100%;margin-top:10px;margin-bottom:10px;border: 3px solid #dedede;padding: 10px 15px;}
+.fullwidthspan{text-align:center;width:100%;display:inline-block;border-bottom:1px solid #ddd;}
+.halfwidthspan{width:50%;float:left;padding-left:20px;padding-right:20px;border-right:1px solid #ddd;margin-top:8px;text-align:center;}
+.halfwidthspan.textalginright{text-align:center;border-right:0;}
+.votingthisgirl{cursor:pointer;}
+li.onlyafterpurchase{display:none;}
+.anchorlocation a{color: red!important;font-weight: 600;}
+#wtmain-content{font-family: 'sans-serif' !important;}
+#wtmain-content .ev-title{font-family: 'sans-serif' !important;color: #1b1b1b!important;    font-size: 28px!important;font-weight: bold;    letter-spacing: 2px!important;text-transform: capitalize!important;}
+span.wt-sub-lb, .woo-tour-info span.sub-lb{ color: #000!important;text-transform: capitalize!important;letter-spacing: 0px!important; }
+.woo-tour-info .media-heading{ font-weight: 200!important;    font-family: 'Source Sans Pro', sans-serif; }
+#wtmain-content .woocommerce-Price-amount{font-family: 'Source Sans Pro', sans-serif; font-weight: 600; }
+.woocommerce #wtmain-content .wt-main.layout-2 .tour-details .btn{background: #dd374a!important;font-family: 'Source Sans Pro'!important;font-size: 20px!important;letter-spacing: 2px!important;    border-radius: 5px!important;}

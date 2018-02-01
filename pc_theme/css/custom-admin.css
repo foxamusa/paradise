@@ -1,0 +1,337 @@
+@font-face {
+	font-family: 'oxygenlight';
+	src: url('../../fonts/Oxygen-Light.eot');
+	src: url('../fonts/Oxygen-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Oxygen-Light.woff2') format('woff2'),
+		url('../fonts/Oxygen-Light.woff') format('woff'),
+		url('../fonts/Oxygen-Light.ttf') format('truetype'),
+		url('../fonts/Oxygen-Light.svg#Oxygen-Light') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'oxygenregular';
+	src: url('../fonts/Oxygen-Regular.eot');
+	src: url('../fonts/Oxygen-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Oxygen-Regular.woff2') format('woff2'),
+		url('../fonts/Oxygen-Regular.woff') format('woff'),
+		url('../fonts/Oxygen-Regular.ttf') format('truetype'),
+		url('../fonts/Oxygen-Regular.svg#Oxygen-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'oxygenbolditalic';
+	src: url('../fonts/Oxygen-BoldItalic.eot');
+	src: url('../fonts/Oxygen-BoldItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Oxygen-BoldItalic.woff2') format('woff2'),
+		url('../fonts/Oxygen-BoldItalic.woff') format('woff'),
+		url('../fonts/Oxygen-BoldItalic.ttf') format('truetype'),
+		url('../fonts/Oxygen-BoldItalic.svg#Oxygen-BoldItalic') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'oxygenbold';
+	src: url('../fonts/Oxygen-Bold.eot');
+	src: url('../fonts/Oxygen-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Oxygen-Bold.woff2') format('woff2'),
+		url('../fonts/Oxygen-Bold.woff') format('woff'),
+		url('../fonts/Oxygen-Bold.ttf') format('truetype'),
+		url('../fonts/Oxygen-Bold.svg#Oxygen-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'oxygenitalic';
+	src: url('../fonts/Oxygen-Italic.eot');
+	src: url('../fonts/Oxygen-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Oxygen-Italic.woff2') format('woff2'),
+		url('../fonts/Oxygen-Italic.woff') format('woff'),
+		url('../fonts/Oxygen-Italic.ttf') format('truetype'),
+		url('../fonts/Oxygen-Italic.svg#Oxygen-Italic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+
+.dataTables_filter, .dataTables_length {font-family: 'oxygenlight';}
+.dataTables_filter input {margin-left: 10px;padding: 10px 20px;}
+.dataTables_length select {padding: 5px;}
+.dataTables_info {font-family: oxygenbold;font-size: 17px;}
+#adminallenquiries_wrapper{ padding: 0 20px 0 0;}
+#adminallenquiries_wrapper .dataTables_paginate {margin-bottom: 25px;margin-top: 20px;}
+#adminallenquiries_wrapper .dataTables_paginate a {background: #ff6000;border-radius: 3px;color: #fff !important;cursor: pointer;display: inline-block;font-family: oxygenbold;margin-right: 4px;padding: 8px 15px;text-decoration: none !important; border-color: transparent;}
+#adminallenquiries_wrapper .dataTables_paginate a.current, #adminallenquiries_wrapper .dataTables_paginate a:hover, #adminallenquiries_wrapper .dataTables_paginate a:active, #adminallenquiries_wrapper .dataTables_paginate a:focus{background: #ab4a0f;color:#fff !important;}
+td.dataTables_empty {text-align: center !important;}
+table#adminallenquiries th{
+  border-bottom: 1px solid #ccc!important;
+}
+table#adminallenquiries tfoot th{
+  border-top: 1px solid #ccc!important;
+}
+#adminallenquiriesPoints_wrapper{ padding: 0 20px 0 0;}
+#adminallenquiriesPoints_wrapper .dataTables_paginate {margin-bottom: 25px;margin-top: 20px;}
+#adminallenquiriesPoints_wrapper .dataTables_paginate a {background: #ff6000;border-radius: 3px;color: #fff !important;cursor: pointer;display: inline-block;font-family: oxygenbold;margin-right: 4px;padding: 8px 15px;text-decoration: none !important; border-color: transparent;}
+#adminallenquiriesPoints_wrapper .dataTables_paginate a.current, #adminallenquiriesPoints_wrapper .dataTables_paginate a:hover, #adminallenquiriesPoints_wrapper .dataTables_paginate a:active, #adminallenquiriesPoints_wrapper .dataTables_paginate a:focus{background: #ab4a0f;color:#fff !important;}
+td.dataTables_empty {text-align: center !important;}
+table#adminallenquiriesPoints th{
+  border-bottom: 1px solid #ccc!important;
+}
+table#adminallenquiriesPoints tfoot th{
+  border-top: 1px solid #ccc!important;
+}
+#adminallenquiriesRedeemedPoints_wrapper{ padding: 0 20px 0 0;}
+#adminallenquiriesRedeemedPoints_wrapper .dataTables_paginate {margin-bottom: 25px;margin-top: 20px;}
+#adminallenquiriesRedeemedPoints_wrapper .dataTables_paginate a {background: #ff6000;border-radius: 3px;color: #fff !important;cursor: pointer;display: inline-block;font-family: oxygenbold;margin-right: 4px;padding: 8px 15px;text-decoration: none !important; border-color: transparent;}
+#adminallenquiriesRedeemedPoints_wrapper .dataTables_paginate a.current, #adminallenquiriesRedeemedPoints_wrapper .dataTables_paginate a:hover, #adminallenquiriesRedeemedPoints_wrapper .dataTables_paginate a:active, #adminallenquiriesRedeemedPoints_wrapper .dataTables_paginate a:focus{background: #ab4a0f;color:#fff !important;}
+td.dataTables_empty {text-align: center !important;}
+table#adminallenquiriesRedeemedPoints th{
+  border-bottom: 1px solid #ccc!important;
+}
+table#adminallenquiriesRedeemedPoints tfoot th{
+  border-top: 1px solid #ccc!important;
+}
+.dataTables_filter > label input{
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+.customdatatableenquiries {
+    width: 325px;
+    word-break: break-all;
+}
+
+.primery_table {
+  padding-top:30px;
+  width:100%;
+}
+.primery_table h2{
+  font-size: 30px;
+  font-family: "oxygenbold";
+  color: #0b0b0b;
+  margin-bottom: 30px;
+}
+.primery_table table {
+  border:1px solid #dadada;
+  width: 100%;
+  border-right: none;
+  border-left: none;
+}
+.primery_table .tab12 td:first-child,
+.primery_table .tab12 th:first-child{
+  border-left: 1px solid #ccc;
+}
+.primery_table .tab12 th {
+  padding: 15px;  
+  text-align: center;
+  border-bottom: none;
+  border-right: 1px solid #ccc;
+  font-family: "oxygenbold";
+  font-size: 16px;
+  background-color: #f7f7f7;
+}
+/*.primery_table .tab12 tbody td:last-child{text-align: right;}*/
+.primery_table .tab12 tbody td {
+  padding:15px; 
+  text-align: center;
+  font-size: 17px;
+  color: #0b0b0b;
+  border-right: 1px solid #ccc;
+  vertical-align: middle;
+  font-family: "oxygenregular";
+}
+.primery_table .tab12 tbody td .button:first-child{
+  color: #181818!important;
+  background: #e8e8e8;
+}
+.primery_table .tab12 tbody td .button:focus,
+.primery_table .tab12 tbody td .button:hover{
+  opacity: 1;
+}
+.primery_table .tab12 tbody td .button{
+  border: none;
+  opacity: 0.9;
+  color: #fff;
+  font-size: 15px;
+  font-family: "oxygenregular";
+  padding: 12px 20px;
+  text-decoration: none;
+  display:inline-block;
+  margin:0px;
+  cursor: pointer;
+  margin:0px;
+
+}
+.primery_table .tab12 tbody td .rel_but1 {
+  background-color: #ff6100;
+  margin:0px 5px 0px 5px;
+}
+.primery_table .tab12 tbody td .rel_but2 {
+  background-color: #181818;
+  margin:0px 0px 0px 0px;
+}
+
+.customdatatableenquiries {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  word-break: break-all;
+} 
+.loader {background: rgba(255, 255, 255, 0.75) none repeat scroll 0 0;bottom: 0;left: 0;margin: auto;position: fixed;right: 0;top: 0; z-index: 99;}
+
+.enrolement-popup .modal-header{
+  background: #ff6000;
+}
+.enrolement-popup .modal-title{
+  font-size: 28px;
+  font-family: "oxygenbold";
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+.enrolement-popup .modal-body{padding: 0px 35px 15px;}
+.enrolement-popup .modal-body h3{
+  font-size: 24px;
+  font-family: "oxygenregular";
+  color: #000000;
+  text-transform: uppercase;
+}
+.enrolement-popup form label{
+  font-size: 16px;
+  font-family:"oxygenbold";
+  width: 100%;
+  margin-bottom: 10px;
+  color: #0b0b0b;
+  text-transform: uppercase;
+}
+.enrolement-popup form .form-control{
+  height: 55px;
+  outline: none;
+  color: #797979;
+  font-size: 16px;
+  font-family: 'oxygenlight';
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.enrolement-popup .close:focus,
+.enrolement-popup .close:hover{opacity: 1; color: #ff6000;}
+.enrolement-popup .close{
+      font-size: 26px;
+    width: 30px;
+    background: #fff;
+    height: 30px;
+    border-radius: 50%;
+    opacity: 1;
+    position: absolute;
+    color: #ff6000;
+    right: -10px;
+    top: -15px;
+}
+.enrolement-popup .text-area-last{position: relative;}
+.enrolement-popup form textarea.form-control{height: 160px!important; resize:none;}
+.enrolement-popup .text-area-last a{
+  position: absolute;
+  bottom: 5px;
+  font-size: 20px;
+  right: 10px;
+  color: #ff6000;
+}
+.enrolement-popup .modal-dialog{
+  width: 700px;
+  max-width: 100%;
+}
+.enrolement-popup.resend textarea{height: 120px;}
+.enrolement-popup .info-line{
+  font-size: 17px;
+  font-family: "oxygenbold";
+  color: #050505;
+  text-transform: uppercase;
+}
+.enrolement-popup.resend .modal-body, .enrolement-popup .modal-body{padding: 20px 35px;text-align:left;}
+.modal-title.mycustompopupstyle{font-family: oxygenbold;}
+.modal-body.mycustompopupstyle p {font-family: oxygenregular;}
+
+.button-section .save-btns:focus,
+.button-section .save-btns:hover{
+  color: #fff;
+  background: #e86a1d;
+}
+.button-section .btn i{margin-right: 5px; font-weight: normal; font-size: 17px;}
+.button-section .btn{font-size: 18px; text-transform: uppercase;
+  background: #ff6000;
+  font-family: 'oxygenbold';
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 0px;
+  border: 1px solid transparent;
+  transition:0.5s ease all;
+  -webkit-transition:0.5s ease all;
+  -moz-transition:0.5s ease all;
+  -ms-transition:0.5s ease all;
+  -o-transition:0.5s ease all;
+  cursor: pointer;
+}
+
+.mycustompopupstyle .modal-body p {
+  font-family: oxygenregular;
+  font-size: 23px;
+}
+a.askforhelpdeletemessage {
+  color: #ff6000;
+  cursor: pointer;
+}
+
+a.deleteenquiry, a.editenquiry, a.deleteagentpoints, a.editagentpoints{
+  color: #ff6000;
+  cursor: pointer;
+  padding: 0 3px;
+}
+.redux-main input[type="text"] {width: 100% !important;}
+span.customred {color: #ff0000;}
+textarea.customErrorClass{position:static;}
+.customErrorClass{color: #f00;font-size: 13px;position:absolute;}
+.enquirymargintop{margin-top:25px;}
+
+.positionrelative, .positionrelative > input{position:relative;}
+.result .error{color: #ea0011;display: block;margin-bottom: 10px;width: 100%;font-family: oxygenregular;} 
+
+.modal {text-align: center;}
+.modal:before {content: '';display: inline-block;height: 100%;vertical-align: middle;margin-right: 0px;}
+.modal-dialog {display: inline-block;vertical-align: middle;}
+.table-responsive table th{vertical-align:middle;}
+
+@media (max-width:767px){.modal::before {margin-right: -4px;}}
+
+.error_admin_massemail{color:red;} 
+#succMsg{background:#FFFFE0;border: 1px solid #9ADF8F;color:#556652 !important;width:100% !important;padding:10px;text-align:left;margin:2px;margin-left: 0px;margin-top: 30px;width:750px !important;}
+#errMsg{background:#FFCECE;border: 1px solid #DF8F8F;color:#665252 !important;width:100% !important;padding:8px 8px 8px 36px; text-align:left;margin:5px;margin-left: 0px;margin-top: 30px;width:750px !important;}   
+.customemailmaindiv {display: inline-block; padding-right: 20px;width:100%;}
+#wpcontent {padding-right: 20px;}
+
+.emailexperiencesection h3 {color: #666;font-family: oxygenregular;padding-bottom: 10px; border-bottom: 2px solid #ccc;}
+.customemailmaindiv .form-group{margin-bottom:15px;}
+.customemailmaindiv form label {color: #0b0b0b;font-family: oxygenregular;font-size: 15px;margin-bottom: 5px;text-transform: capitalize;width: 100%;display:inline-block;font-weight: bold;}
+.customemailmaindiv form label span {color: #ff0000;display: none;}
+.customemailmaindiv form .form-control {border-radius: 0;box-shadow: none;color: #797979;font-family: "oxygenlight";font-size: 16px;height: 45px;outline: medium none;width: 100%;}
+span.mailbodyreference {color: #666;display: inline-block;font-size: 16px;margin-bottom: 20px;padding-left: 15px;padding-right: 15px;}
+
+#toplevel_page_view-user-info{display:none;}
+.customcountryinputs input{margin-top:0 !important;}
+.customcountryinputs > span {color: #666;font-family: oxygenregular;margin-left: 10px;}
+#uploadsection {font-family: oxygenregular;}
+.img-uploaded-section ul {margin: 0;padding: 0;}
+.img-uploaded-section ul li {border: 1px solid #dcdcdc;display: inline-block;height: 74px;list-style: outside none none;margin-bottom: 10px;margin-right: 10px;position: relative;width: 90px;}
+.img-uploaded-section ul li img {height: 100%;width: 100%;}
+.enquiriesmeta {font-family: oxygenbold;font-size: 17px;color: #333 !important;}
+section.emailexperiencesection{margin-bottom: 50px;}
+
+ul.img_list{margin-top:10px;padding-left: 5px;padding-right: 5px;text-align:left;}
+.img_list li {border:1px solid #dedede;display: inline-block;margin: 5px;width:100px;height:100px;position:relative;overflow: hidden;}
+.img_list li img {width: auto;max-width:100%;position:absolute;left:0;right:0;top:0;bottom:0;margin:auto !important;}
+li.girlsphotositem span{position:initial;}
