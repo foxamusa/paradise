@@ -66,12 +66,12 @@ class Theme_My_Login_Custom_Passwords extends Theme_My_Login_Abstract {
 		$template = Theme_My_Login::get_object()->get_active_instance();
 		?>
 		<p class="tml-user-pass1-wrap">
-			<label for="pass1<?php $template->the_instance(); ?>"><?php _e( 'Password', 'theme-my-login' ); ?></label>
-			<input autocomplete="off" name="pass1" id="pass1<?php $template->the_instance(); ?>" class="input" size="20" value="" type="password" />
+			<label for="pass1<?php $template->the_instance(); ?>">
+			<input autocomplete="off" name="pass1" id="pass1<?php $template->the_instance(); ?>" class="input" placeholder="<?php _e( 'Password*', 'theme-my-login' ); ?>" size="20" value="" type="password" /></label>
 		</p>
 		<p class="tml-user-pass2-wrap">
-			<label for="pass2<?php $template->the_instance(); ?>"><?php _e( 'Confirm Password', 'theme-my-login' ); ?></label>
-			<input autocomplete="off" name="pass2" id="pass2<?php $template->the_instance(); ?>" class="input" size="20" value="" type="password" />
+			<label for="pass2<?php $template->the_instance(); ?>">
+				<input autocomplete="off" name="pass2" id="pass2<?php $template->the_instance(); ?>" class="input" placeholder="<?php _e( 'Confirm Password*', 'theme-my-login' ); ?>" size="20" value="" type="password" /></label>
 		</p>
 		<?php
 	}
