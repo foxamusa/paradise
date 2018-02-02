@@ -309,8 +309,18 @@ i#mute-video {
     max-height: 60px;
 }
 .master-head.shrink ul#primary-menu {
-margin: 0 0 0.5em 3em;
+	margin: 0 0 0.5em 3em;
+	/*margin: 4.5em 0 0.5em 0em;*/
 }
+
+.master-head #site-navigation.toggled ul#primary-menu {
+	margin: 6.5em 0 0.5em 0em;
+}
+
+.master-head.shrink #site-navigation.toggled ul#primary-menu {
+	margin: 4.5em 0 0.5em 0em;
+}
+
 .master-head.shrink nav.main-navigation .menu-toggle {
     top: -6px;
 }

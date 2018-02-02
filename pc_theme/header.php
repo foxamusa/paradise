@@ -37,7 +37,7 @@
     <!--        <div class="main-mute-btn volume-off"></div> -->
             <div class="container">
                 <div class="row">
-                    <div class="site-branding col-xs-4 col-md-2">
+                    <div class="site-branding col-xs-4 col-md-1"> <!-- col-md-2 -->
                         <div class="logo">
 							<?php the_custom_logo(); ?>
                         </div>
@@ -57,7 +57,7 @@
 						) );
 						?>
                     </nav><!-- #site-navigation -->
-                    <nav id="site-navigation-pc" class="main-navigation-pc col-xs-8 col-md-10">
+                    <nav id="site-navigation-pc" class="main-navigation-pc col-xs-8 col-md-11">
 						<?php
 						wp_nav_menu( array(
 							'theme_location' => 'menu-1',
