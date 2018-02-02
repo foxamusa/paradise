@@ -8,7 +8,7 @@ Theme My Login will always look in your theme's directory first, before using th
 	<?php $template->the_action_template_message( 'login' ); ?>
 	<?php $template->the_errors(); ?>
 	<form name="loginform" id="loginform<?php $template->the_instance(); ?>" action="<?php $template->the_action_url( 'login', 'login_post' ); ?>" method="post">
-		tyt
+		tot
 		<p class="tml-user-login-wrap">
 			<label for="user_login<?php $template->the_instance(); ?>"><?php
 				if ( 'username' == $theme_my_login->get_option( 'login_type' ) ) {
@@ -30,10 +30,10 @@ Theme My Login will always look in your theme's directory first, before using th
 		<?php do_action( 'login_form' ); ?>
 
 		<div class="tml-rememberme-submit-wrap">
-			<p class="tml-rememberme-wrap">
+			<!-- <p class="tml-rememberme-wrap">
 				<input name="rememberme" type="checkbox" id="rememberme<?php $template->the_instance(); ?>" value="forever" />
 				<label for="rememberme<?php $template->the_instance(); ?>"><?php esc_attr_e( 'Remember Me', 'theme-my-login' ); ?></label>
-			</p>
+			</p> -->
 
 			<p class="tml-submit-wrap">
 				<input type="submit" name="wp-submit" id="wp-submit<?php $template->the_instance(); ?>" value="<?php esc_attr_e( 'Log In', 'theme-my-login' ); ?>" />
