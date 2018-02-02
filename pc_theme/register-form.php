@@ -19,7 +19,7 @@ jQuery(document).ready(function($)
 
 
 <div class="tml tml-register tml-register_form " id="theme-my-login<?php $template->the_instance(); ?>">
-	<?php $template->the_action_template_message( 'register' ); ?>
+	<?php //$template->the_action_template_message( 'register' ); ?>
 	<?php $template->the_errors(); ?>
 	<form class="tmlregistrationform" name="registerform" id="registerform<?php $template->the_instance(); ?>" action="<?php $template->the_action_url( 'register', 'login_post' ); ?>" method="post">
 		<?php if ( 'email' != $theme_my_login->get_option( 'login_type' ) ) : ?>

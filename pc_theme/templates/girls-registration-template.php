@@ -282,10 +282,12 @@ if(isset($_POST['girlsregsubmit']))
 	}
 }
 ?>
-<style>
+<!-- <style>
 .tml{max-width:100%;}
 .tml .maxwidththml{max-width:320px;}
-</style>
+</style> -->
+<div class="col-md-3"></div>
+<div class="col-md-7 col-offset-6 centered">
 <div class="tml tml-register" id="theme-my-login">
 
 	<div class="loaderdiv"></div>
@@ -353,30 +355,30 @@ if(isset($_POST['girlsregsubmit']))
 	<p class="message maxwidththml">Register For This Site</p>
 	<form class="tmlregistrationformforgirls" name="registerform" id="registerformgirls" action="#" method="post" enctype="multipart/form-data">
 		<p class="tml-user-login-wrap maxwidththml">
-			<label for="user_login"><?php _e( 'Username', 'theme-my-login' ); ?> <span class="requiredred">*</span></label> 
-			<input type="text" name="girlsReg[user_login]" id="user_login" class="input" value="" size="20" />
+			<label for="user_login">
+			<input type="text" name="girlsReg[user_login]" id="user_login" class="input" value="" placeholder="<?php _e( 'Username*', 'theme-my-login' ); ?> " placeholder="" size="20" /></label>
 		</p>
 	
 		<p class="tml-first-name-wrap maxwidththml">
-			<label for="first_name"><?php _e( 'First Name', 'theme-my-login' ); ?> <span class="requiredred">*</span></label> 
-			<input type="text" name="girlsReg[first_name]" id="first_name" class="input" value="" size="20" />
+			<label for="first_name">
+			<input type="text" name="girlsReg[first_name]" id="first_name" class="input" value="" placeholder="<?php _e( 'First Name*', 'theme-my-login' ); ?>" size="20" /></label> 
 		</p>
 		<p class="tml-last-name-wrap maxwidththml">
-			<label for="last_name"><?php _e( 'Last Name', 'theme-my-login' ); ?> <span class="requiredred">*</span></label> 
-			<input type="text" name="girlsReg[last_name]" id="last_name" class="input" value="" size="20" />
+			<label for="last_name">
+			<input type="text" name="girlsReg[last_name]" id="last_name" class="input" value="" placeholder="<?php _e( 'Last Name*', 'theme-my-login' ); ?>" size="20" /></label> 
 		</p>
 		<p class="tml-phone-wrap maxwidththml">
-			<label for="phone"><?php _e( 'Phone Number', 'theme-my-login' ); ?> <span class="requiredred">*</span></label> 
-			<input type="text" name="girlsReg[phone]" id="phone" class="input" value="" size="20" />
+			<label for="phone">
+			<input type="text" name="girlsReg[phone]" id="phone" class="input" value="" placeholder="<?php _e( 'Phone Number*', 'theme-my-login' ); ?>" size="20" /></label> 
 		</p>
 		<p class="tml-age-wrap maxwidththml">
-			<label for="age"><?php _e( 'Age', 'theme-my-login' ); ?> <span class="requiredred">*</span></label> 
-			<input type="text" name="girlsReg[age]" id="age" class="input" value="" size="20" />
+			<label for="age">
+			<input type="text" name="girlsReg[age]" id="age" class="input" value="" placeholder="<?php _e( 'Age*', 'theme-my-login' ); ?>" size="20" /></label>
 		</p>
 		
 		<p class="tml-city-wrap maxwidththml">
-			<label for="city"><?php _e( 'City', 'theme-my-login' ); ?> <span class="requiredred">*</span></label> 
-			<input type="text" name="girlsReg[city]" id="city" class="input" value="" size="20" />
+			<label for="city">
+			<input type="text" name="girlsReg[city]" id="city" class="input" value="" placeholder="<?php _e( 'City*', 'theme-my-login' ); ?> " size="20" /></label> 
 		</p>
 		<label for="girlsReg[billing_country]">Select Country <span class="requiredred">*</span></label> 
 		<?php 
@@ -385,18 +387,18 @@ if(isset($_POST['girlsregsubmit']))
 		?>
 		
 		<p class="tml-user-email-wrap maxwidththml">
-			<label for="user_email"><?php _e( 'E-mail', 'theme-my-login' ); ?> <span class="requiredred">*</span></label> 
-			<input type="text" name="girlsReg[user_email]" id="user_email" class="input" value="" size="20" />
+			<label for="user_email">
+			<input type="text" name="girlsReg[user_email]" id="user_email" class="input" value="" placeholder="<?php _e( 'E-mail', 'theme-my-login' ); ?>" size="20" /></label> 
 		</p>
 		
 		<p class="tml-user-pass1-wrap maxwidththml">
-			<label for="pass1">Create your Password <span class="requiredred">*</span></label> 
-			<input autocomplete="off" name="girlsReg[pass1]" id="pass1" class="input customErrorClass" size="20" value="" type="password" aria-describedby="pass1-error">
+			<label for="pass1"></label> 
+			<input autocomplete="off" name="girlsReg[pass1]" id="pass1" class="input customErrorClass" placeholder="<?php _e( 'Create your Password*', 'theme-my-login' ); ?>" size="20" value="" type="password" aria-describedby="pass1-error">
 		</p>
 	
 		<p class="tml-user-pass2-wrap maxwidththml">
-			<label for="pass2">Confirm your Password <span class="requiredred">*</span></label> 
-			<input autocomplete="off" name="girlsReg[pass2]" id="pass2" class="input customErrorClass" size="20" value="" type="password" aria-describedby="pass2-error">
+			<label for="pass2"></label> 
+			<input autocomplete="off" name="girlsReg[pass2]" id="pass2" class="input customErrorClass" placeholder="<?php _e( 'Confirm your Password*', 'theme-my-login' ); ?>" size="20" value="" type="password" aria-describedby="pass2-error">
 		</p>
 		
 		<p class="fullwidthpara">
@@ -431,3 +433,5 @@ if(isset($_POST['girlsregsubmit']))
 		<li><a href="<?php echo get_site_url().'/lostpassword';?>" rel="nofollow">Lost Password</a></li>
 	</ul>
 </div>
+</div>
+

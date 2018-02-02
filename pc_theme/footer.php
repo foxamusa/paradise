@@ -17,7 +17,7 @@
 		<div class="site-info col-md-4">
 			All rights &copy; <a href="/">Concord Pacific</a>
 		</div><!-- .site-info -->
-		<div class="site-info col-md-8 text-left">
+		<div class="site-info col-md-4 col-xs-12 text-center">
 			<a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 			<a href="#" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
 			<a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
