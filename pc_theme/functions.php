@@ -413,8 +413,22 @@ function pt($data)
 	echo '<pre>';
 	print_r($data);
 	echo '</pre>';
+	die();
 }
 
+function is_role_admin()
+{
+ 	global $current_user;
+	if(is_user_logged_in())
+	{	
+		$getCurrentUserID = $current_user->ID;	
+		$getUserInfo = get_userdata($getCurrentUserID );
+		if(!in_array("administrator", $getUserInfo->roles)) {
+			return false;
+		}
+		return true;
+	}
+}
 /*********Adding, Saving, and Showing Text Input For Woocommerce Variations**********/
 add_action( 'woocommerce_product_after_variable_attributes', 'rp_variation_settings_fields', 10, 3 );
 add_action( 'woocommerce_save_product_variation', 'rp_save_variation_settings_fields', 10, 2 );
@@ -745,7 +759,7 @@ function rp_load_loading_effects_head()
 		<?php
 		}
 	}
-	if(is_page('voting'))
+	if(is_page('models'))
 	{ ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/loadingeffects/css/default.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() ?>/loadingeffects/css/component.css" />
@@ -757,7 +771,7 @@ function rp_load_loading_effects_head()
 add_action('wp_footer','rp_load_loading_effects_foot');
 function rp_load_loading_effects_foot()
 { 
-	if(is_page('voting'))
+	if(is_page('models'))
 	{ ?>
 		<script src="<?php echo get_template_directory_uri() ?>/loadingeffects/js/masonry.pkgd.min.js"></script>
 		<script src="<?php echo get_template_directory_uri() ?>/loadingeffects/js/imagesloaded.js"></script>

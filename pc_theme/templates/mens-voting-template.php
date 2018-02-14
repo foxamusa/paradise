@@ -8,19 +8,24 @@ if(!is_user_logged_in())
 elseif(is_user_logged_in())
 {
 	$getUserInfo = get_userdata($current_user->ID);
+	// $roles_type = array('mens', 'administrator'); 
 	if($getUserInfo)
 	{
-		if(!in_array("mens",$getUserInfo->roles))
-		{
+		if(!in_array('mens', $getUserInfo->roles) && !in_array('administrator', $getUserInfo->roles))
+		{	
+			
 			$redirection = 1;
 		}
+
 		$checkAlreadyVoted = get_user_meta($current_user->ID,'men_already_voted',true);
+		// pt($checkAlreadyVoted);
+		// die();
+
 		if($checkAlreadyVoted)
 		{
 			$redirection = 1;
-		}
-		else
-		{
+		} else {
+			// pt($checkAlreadyVoted);
 			$customer_orders = wc_get_orders( $args = array(
 			'numberposts' => -1,
 			'meta_key'    => '_customer_user',
@@ -28,7 +33,14 @@ elseif(is_user_logged_in())
 			'post_status' => array( 'wc-pending', 'wc-processing', 'wc-on-hold', 'wc-completed' ),
 			) );
 			$valuetoShow = '';
+			
 			$customer_orders_count = count( $customer_orders );
+			$is_admin = is_role_admin();
+
+			if($is_admin){
+				$customer_orders_count = 1;
+			}
+
 			if(empty($customer_orders_count))
 			{
 				$redirection = 1;
@@ -36,6 +48,7 @@ elseif(is_user_logged_in())
 		}
 	}
 }
+
 if($redirection ==1)
 {
 	wp_redirect( get_site_url().'/product-category/upcoming-destinations/' );
@@ -59,6 +72,7 @@ $girlsUserQueryArgs = array
 		)
 );
 $girlsUserQuery = new WP_User_Query( $girlsUserQueryArgs );
+
 if ( ! empty( $girlsUserQuery->results ) ) 
 {
 	echo '<div class="container">
