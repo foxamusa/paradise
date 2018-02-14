@@ -386,8 +386,8 @@
 					<input type="hidden" name="bcountry" value="US" />
 				<?php } ?>
 			<div class="pmpro_checkout-field pmpro_checkout-field-bphone">
-				<label for="bphone"><?php _e('Phone', 'paid-memberships-pro' );?></label>
-				<input id="bphone" name="bphone" type="text" class="input <?php echo pmpro_getClassForField("bphone");?>" size="30" value="<?php echo esc_attr(formatPhone($bphone)); ?>" />
+				<label for="bphone">
+				<input id="bphone" name="bphone" type="text" class="input <?php echo pmpro_getClassForField("bphone");?>" size="30" placeholder='<?php _e('Phone', 'paid-memberships-pro' );?>' value="<?php echo esc_attr(formatPhone($bphone)); ?>" /></label>
 			</div> <!-- end pmpro_checkout-field-bphone -->
 			<?php if($skip_account_fields) { ?>
 			<?php
