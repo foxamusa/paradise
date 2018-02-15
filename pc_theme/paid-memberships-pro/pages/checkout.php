@@ -300,6 +300,7 @@
 			<span class="pmpro_checkout-h3-name"><?php _e('Billing Address', 'paid-memberships-pro' );?></span>
 		</h3>
 		<div class="pmpro_checkout-fields">
+			<div class="col-md-6">
 			<div class="pmpro_checkout-field pmpro_checkout-field-bfirstname">
 				<label for="bfirstname">
 				<input id="bfirstname" name="bfirstname" type="text" class="input <?php echo pmpro_getClassForField("bfirstname");?>" size="30" placeholder="<?php _e('First Name', 'paid-memberships-pro' );?>" value="<?php echo esc_attr($bfirstname); ?>" /></label>
@@ -316,6 +317,7 @@
 				<label for="baddress2">
 				<input id="baddress2" name="baddress2" type="text" class="input <?php echo pmpro_getClassForField("baddress2");?>" size="30" placeholder='<?php _e('Address 2', 'paid-memberships-pro' );?>' value="<?php echo esc_attr($baddress2); ?>" /></label>
 			</div> <!-- end pmpro_checkout-field-baddress2 -->
+
 			<?php
 				$longform_address = apply_filters("pmpro_longform_address", true);
 				if($longform_address) { ?>
@@ -323,6 +325,9 @@
 						<label for="bcity">
 						<input id="bcity" name="bcity" type="text" class="input <?php echo pmpro_getClassForField("bcity");?>" size="30" placeholder='<?php _e('City', 'paid-memberships-pro' );?>' value="<?php echo esc_attr($bcity); ?>" /></label>
 					</div> <!-- end pmpro_checkout-field-bcity -->
+					</div>
+					<div class="col-md-6">
+
 					<div class="pmpro_checkout-field pmpro_checkout-field-bstate">
 						<label for="bstate">
 						<input id="bstate" name="bstate" type="text" class="input <?php echo pmpro_getClassForField("bstate");?>" size="30" placeholder='<?php _e('State', 'paid-memberships-pro' );?>' value="<?php echo esc_attr($bstate); ?>" /></label>
@@ -365,12 +370,12 @@
 						<input id="bzipcode" name="bzipcode" type="text" class="input <?php echo pmpro_getClassForField("bzipcode");?>" size="5" value="<?php echo esc_attr($bzipcode); ?>" />
 					</div> <!-- end pmpro_checkout-field-bcity_state_zip -->
 			<?php } ?>
-
+			
 			<?php
 				$show_country = apply_filters("pmpro_international_addresses", true);
 				if($show_country) { ?>
 					<div class="pmpro_checkout-field pmpro_checkout-field-bcountry">
-						<label for="bcountry"><?php _e('Country', 'paid-memberships-pro' );?></label>
+						<label for="bcountry"><?php //_e('Country', 'paid-memberships-pro' );?>
 						<select name="bcountry" id="bcountry" class="<?php echo pmpro_getClassForField("bcountry");?>">
 						<?php
 							global $pmpro_countries, $pmpro_default_country;
@@ -380,7 +385,7 @@
 							foreach($pmpro_countries as $abbr => $country) { ?>
 								<option value="<?php echo $abbr?>" <?php if($abbr == $bcountry) { ?>selected="selected"<?php } ?>><?php echo $country?></option>
 							<?php } ?>
-						</select>
+						</select></label>
 					</div> <!-- end pmpro_checkout-field-bcountry -->
 				<?php } else { ?>
 					<input type="hidden" name="bcountry" value="US" />
@@ -401,21 +406,22 @@
 				}
 			?>
 			<div class="pmpro_checkout-field pmpro_checkout-field-bemail">
-				<label for="bemail"><?php _e('E-mail Address', 'paid-memberships-pro' );?></label>
-				<input id="bemail" name="bemail" type="<?php echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" class="input <?php echo pmpro_getClassForField("bemail");?>" size="30" value="<?php echo esc_attr($bemail); ?>" disabled />
+				<label for="bemail">
+				<input id="bemail" name="bemail" type="<?php echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" class="input <?php echo pmpro_getClassForField("bemail");?>" size="30" placeholder='<?php _e('E-mail Address', 'paid-memberships-pro' );?>'value="<?php echo esc_attr($bemail); ?>" disabled /></label>
 			</div> <!-- end pmpro_checkout-field-bemail -->
 			<?php
 				$pmpro_checkout_confirm_email = apply_filters("pmpro_checkout_confirm_email", false);
 				if($pmpro_checkout_confirm_email) { ?>
 					<div class="pmpro_checkout-field pmpro_checkout-field-bconfirmemail">
-						<label for="bconfirmemail"><?php _e('Confirm E-mail', 'paid-memberships-pro' );?></label>
-						<input id="bconfirmemail" name="bconfirmemail" type="<?php echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" class="input <?php echo pmpro_getClassForField("bconfirmemail");?>" size="30" value="<?php echo esc_attr($bconfirmemail); ?>" />
+						<label for="bconfirmemail">
+						<input id="bconfirmemail" name="bconfirmemail" type="<?php echo ($pmpro_email_field_type ? 'email' : 'text'); ?>" class="input <?php echo pmpro_getClassForField("bconfirmemail");?>" size="30" placeholder='<?php _e('Confirm E-mail', 'paid-memberships-pro' );?>' value="<?php echo esc_attr($bconfirmemail); ?>" /></label>
 					</div> <!-- end pmpro_checkout-field-bconfirmemail -->
 				<?php } else { ?>
 					<input type="hidden" name="bconfirmemail_copy" value="1" />
 				<?php } ?>
 			<?php } ?>
 		</div> <!-- end pmpro_checkout-fields -->
+		</div>
 	</div> <!--end pmpro_billing_address_fields -->
 	</div>
 	<?php } ?>
@@ -482,50 +488,58 @@
 							-->
 						</script>
 					<?php } ?>
+					<div class='col-md-6'>
 				<div class="pmpro_checkout-field pmpro_payment-account-number">
-					<label for="AccountNumber"><?php _e('Card Number', 'paid-memberships-pro' );?></label>
-					<input id="AccountNumber" name="AccountNumber" class="input <?php echo pmpro_getClassForField("AccountNumber");?>" type="text" size="30" value="<?php echo esc_attr($AccountNumber); ?>" data-encrypted-name="number" autocomplete="off" />
+					<label for="AccountNumber">
+					<input id="AccountNumber" name="AccountNumber" class="input <?php echo pmpro_getClassForField("AccountNumber");?>" type="text" size="30" placeholder='<?php _e('Card Number', 'paid-memberships-pro' );?>' value="<?php echo esc_attr($AccountNumber); ?>" data-encrypted-name="number" autocomplete="off" /></label>
 				</div>
-				<div class="pmpro_checkout-field pmpro_payment-expiration">
-					<label for="ExpirationMonth"><?php _e('Expiration Date', 'paid-memberships-pro' );?></label>
-					<select id="ExpirationMonth" name="ExpirationMonth" class=" <?php echo pmpro_getClassForField("ExpirationMonth");?>">
-						<option value="01" <?php if($ExpirationMonth == "01") { ?>selected="selected"<?php } ?>>01</option>
-						<option value="02" <?php if($ExpirationMonth == "02") { ?>selected="selected"<?php } ?>>02</option>
-						<option value="03" <?php if($ExpirationMonth == "03") { ?>selected="selected"<?php } ?>>03</option>
-						<option value="04" <?php if($ExpirationMonth == "04") { ?>selected="selected"<?php } ?>>04</option>
-						<option value="05" <?php if($ExpirationMonth == "05") { ?>selected="selected"<?php } ?>>05</option>
-						<option value="06" <?php if($ExpirationMonth == "06") { ?>selected="selected"<?php } ?>>06</option>
-						<option value="07" <?php if($ExpirationMonth == "07") { ?>selected="selected"<?php } ?>>07</option>
-						<option value="08" <?php if($ExpirationMonth == "08") { ?>selected="selected"<?php } ?>>08</option>
-						<option value="09" <?php if($ExpirationMonth == "09") { ?>selected="selected"<?php } ?>>09</option>
-						<option value="10" <?php if($ExpirationMonth == "10") { ?>selected="selected"<?php } ?>>10</option>
-						<option value="11" <?php if($ExpirationMonth == "11") { ?>selected="selected"<?php } ?>>11</option>
-						<option value="12" <?php if($ExpirationMonth == "12") { ?>selected="selected"<?php } ?>>12</option>
-					</select>/<select id="ExpirationYear" name="ExpirationYear" class=" <?php echo pmpro_getClassForField("ExpirationYear");?>">
-						<?php
-							for($i = date_i18n("Y"); $i < intval( date_i18n("Y") ) + 10; $i++)
-							{
-						?>
-							<option value="<?php echo $i?>" <?php if($ExpirationYear == $i) { ?>selected="selected"<?php } ?>><?php echo $i?></option>
-						<?php
-							}
-						?>
-					</select>
+				</div>
+				<div class='col-md-6'>
+					<div class="pmpro_checkout-field pmpro_payment-expiration">
+						<label for="ExpirationMonth"><?php // _e('Expiration Date', 'paid-memberships-pro' );?>
+						<select id="ExpirationMonth" name="ExpirationMonth" class=" <?php echo pmpro_getClassForField("ExpirationMonth");?>">
+							<option value="01" <?php if($ExpirationMonth == "01") { ?>selected="selected"<?php } ?>>01</option>
+							<option value="02" <?php if($ExpirationMonth == "02") { ?>selected="selected"<?php } ?>>02</option>
+							<option value="03" <?php if($ExpirationMonth == "03") { ?>selected="selected"<?php } ?>>03</option>
+							<option value="04" <?php if($ExpirationMonth == "04") { ?>selected="selected"<?php } ?>>04</option>
+							<option value="05" <?php if($ExpirationMonth == "05") { ?>selected="selected"<?php } ?>>05</option>
+							<option value="06" <?php if($ExpirationMonth == "06") { ?>selected="selected"<?php } ?>>06</option>
+							<option value="07" <?php if($ExpirationMonth == "07") { ?>selected="selected"<?php } ?>>07</option>
+							<option value="08" <?php if($ExpirationMonth == "08") { ?>selected="selected"<?php } ?>>08</option>
+							<option value="09" <?php if($ExpirationMonth == "09") { ?>selected="selected"<?php } ?>>09</option>
+							<option value="10" <?php if($ExpirationMonth == "10") { ?>selected="selected"<?php } ?>>10</option>
+							<option value="11" <?php if($ExpirationMonth == "11") { ?>selected="selected"<?php } ?>>11</option>
+							<option value="12" <?php if($ExpirationMonth == "12") { ?>selected="selected"<?php } ?>>12</option>
+						</select><p> / </p><select id="ExpirationYear" name="ExpirationYear" class=" <?php echo pmpro_getClassForField("ExpirationYear");?>">
+							<?php
+								for($i = date_i18n("Y"); $i < intval( date_i18n("Y") ) + 10; $i++)
+								{
+							?>
+								<option value="<?php echo $i?>" <?php if($ExpirationYear == $i) { ?>selected="selected"<?php } ?>><?php echo $i?></option>
+							<?php
+								}
+							?>
+						</select></label>
+					</div>
 				</div>
 				<?php
 					$pmpro_show_cvv = apply_filters("pmpro_show_cvv", true);
 					if($pmpro_show_cvv) { ?>
-					<div class="pmpro_checkout-field pmpro_payment-cvv">
-						<label for="CVV"><?php _e('Security Code (CVC)', 'paid-memberships-pro' );?></label>
-						<input id="CVV" name="CVV" type="text" size="4" value="<?php if(!empty($_REQUEST['CVV'])) { echo esc_attr($_REQUEST['CVV']); }?>" class="input <?php echo pmpro_getClassForField("CVV");?>" />  <small>(<a href="javascript:void(0);" onclick="javascript:window.open('<?php echo pmpro_https_filter(PMPRO_URL); ?>/pages/popup-cvv.html','cvv','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=600, height=475');"><?php _e("what's this?", 'paid-memberships-pro' );?></a>)</small>
+					<div class="col-md-6 col-md-pull-6">
+						<div class="pmpro_checkout-field pmpro_payment-cvv">
+							<label for="CVV"><?php // _e('Security Code (CVC)', 'paid-memberships-pro' );?></label>
+							<input id="CVV" name="CVV" type="text" size="4" placeholder='<?php _e('CVC', 'paid-memberships-pro')?>' value="<?php if(!empty($_REQUEST['CVV'])) { echo esc_attr($_REQUEST['CVV']); }?>" class="input <?php echo pmpro_getClassForField("CVV");?>" />  <small>(<a href="javascript:void(0);" onclick="javascript:window.open('<?php echo pmpro_https_filter(PMPRO_URL); ?>/pages/popup-cvv.html','cvv','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=600, height=475');"><?php _e("what's this?", 'paid-memberships-pro' );?></a>)</small>
+						</div>
 					</div>
 				<?php } ?>
 				<?php if($pmpro_show_discount_code) { ?>
+					<div class="col-md-6">
 					<div class="pmpro_checkout-field pmpro_payment-discount-code">
 						<label for="discount_code"><?php _e('Discount Code', 'paid-memberships-pro' );?></label>
 						<input class="input <?php echo pmpro_getClassForField("discount_code");?>" id="discount_code" name="discount_code" type="text" size="10" value="<?php echo esc_attr($discount_code); ?>" />
 						<input type="button" id="discount_code_button" name="discount_code_button" value="<?php _e('Apply', 'paid-memberships-pro' );?>" />
 						<p id="discount_code_message" class="pmpro_message" style="display: none;"></p>
+					</div>
 					</div>
 				<?php } ?>
 			</div> <!-- end pmpro_checkout-fields -->
@@ -603,9 +617,9 @@
 	<?php do_action("pmpro_checkout_after_tos_fields"); ?>
 
 	<?php do_action("pmpro_checkout_before_submit_button"); ?>
-
+	<div class="col-md-6">
 	<div class="pmpro_submit">
-		<hr />
+		<!-- <hr /> -->
 		<?php if($pmpro_review) { ?>
 
 			<span id="pmpro_submit_span">
@@ -641,6 +655,7 @@
 				echo $processing_message;
 			?>
 		</span>
+	</div>
 	</div>
 </form>
 

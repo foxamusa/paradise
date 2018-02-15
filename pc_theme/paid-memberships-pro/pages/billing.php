@@ -200,7 +200,7 @@
 						{
 					?>
 					<div class="pmpro_checkout-field pmpro_checkout-field-bcountry">
-						<label for="bcountry"><?php _e('Country', 'paid-memberships-pro' );?></label>
+						<label for="bcountry"><?php _e('Country', 'paid-memberships-pro' );?>
 						<select name="bcountry" class="<?php echo pmpro_getClassForField("bcountry");?>">
 							<?php
 								global $pmpro_countries, $pmpro_default_country;
@@ -213,7 +213,7 @@
 								<?php
 								}
 							?>
-						</select>
+						</select></label>
 					</div> <!-- end pmpro_checkout-field-bcountry -->
 					<?php
 						}
@@ -313,8 +313,8 @@
 							}
 						?>
 					<div class="pmpro_checkout-field pmpro_payment-account-number">
-						<label for="AccountNumber"><?php _e('Card Number', 'paid-memberships-pro' );?></label>
-						<input id="AccountNumber" name="AccountNumber" class="input <?php echo pmpro_getClassForField("AccountNumber");?>" type="text" size="25" value="<?php echo esc_attr($AccountNumber)?>" autocomplete="off" />
+						<label for="AccountNumber">
+						<input id="AccountNumber" name="AccountNumber" class="input <?php echo pmpro_getClassForField("AccountNumber");?>" type="text" size="25" placeholder='<?php _e('Card Number', 'paid-memberships-pro' );?>' value="<?php echo esc_attr($AccountNumber)?>" autocomplete="off" /></label>
 					</div>
 					<div class="pmpro_checkout-field pmpro_payment-expiration">
 						<label for="ExpirationMonth"><?php _e('Expiration Date', 'paid-memberships-pro' );?></label>
