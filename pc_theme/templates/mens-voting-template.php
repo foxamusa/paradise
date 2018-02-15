@@ -71,45 +71,68 @@ $girlsUserQueryArgs = array
 			)
 		)
 );
-$girlsUserQuery = new WP_User_Query( $girlsUserQueryArgs );
+$girlsUserQuery = new WP_User_Query( $girlsUserQueryArgs ); ?> 
 
-if ( ! empty( $girlsUserQuery->results ) ) 
-{
-	echo '<div class="container">
-			<div class="customloader"></div>
-			<div class="customparkingremovephotosmodalresponse"></div>
-			<ul class="grid effect-3 customulgridclass" id="grid">';
-			foreach($girlsUserQuery->results as $girlsUserQueryValue)
-			{
-				$getUserDisplayName = $girlsUserQueryValue->data->display_name;
-				$getUserID = $girlsUserQueryValue->ID;
-				$getUserVoteCount = get_user_meta($getUserID,'admin_set_votes_count',true);
-				$getGirlsPicture = get_user_meta($getUserID,'admin_set_girls_picture',true);
-				$girlsPhotosURL = RP_FILE_PATH_GIRLS_URL.'/users/girlsphotos/' . $getGirlsPicture;
-				if($girlsPhotosURL)
-				{
-					?>
-					<li>
-						<a href="<?php echo $girlsPhotosURL; ?>">
-							<img src="<?php echo $girlsPhotosURL; ?>">
-						</a>
-						<div class="internaldetail">
-							<span class="fullwidthspan"><?php echo $getUserDisplayName;?></span>	
-							<span class="halfwidthspan"><i data-girl-ID="<?php echo $getUserID; ?>" title="Vote" class="fa fa-thumbs-up votingthisgirl" aria-hidden="true"></i></span>
-							<span class="halfwidthspan textalginright"><?php echo $getUserVoteCount;?></span>
+<div id="pl-17" class="panel-layout">
+	<div id="pg-17-0" class="panel-grid panel-has-style">
+		<div class="siteorigin-panels-stretch panel-row-style panel-row-style-for-17-0" data-stretch-type="full" style="margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; border-left: 0px; border-right: 0px;">
+			<div id="pgc-17-0-0" class="panel-grid-cell">
+				<div id="panel-17-0-0-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="0">
+					<div class="cover-video panel-widget-style panel-widget-style-for-17-0-0-0">
+						<div class="so-widget-sow-editor so-widget-sow-editor-base">
+							<div class="siteorigin-widget-tinymce textwidget">
+								<div class="men-voting header">
+									<div class="cover-video panel-widget-style panel-widget-style-for-17-0-0-0">
+										<div class="so-widget-sow-editor so-widget-sow-editor-base">
+											<div class="siteorigin-widget-tinymce textwidget">
+												<div class="cover-new_root_17R">
+													<span class="video_root_Bc- video_cover_r51" style="width:100%;height:694px;"><br>
+														<span class="video_wrapper_2RW"><br>
+															<video src="https://player.vimeo.com/external/132847237.hd.mp4?s=a841aa2f063068d1766d0f45498ee0d0315df6aa&amp;profile_id=113" width="100%" height="600px" autoplay="" loop="" muted=""><br>
+															</video>
+														</span>
+														<br>
+													</span>
+													<div class="cover-new_slogan_3yU">
+														<!-- <h2>TYTSub tyt sub tyt --> 
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
-					</li>
-					<?php 
-				}
-			}
-			echo '</ul>';
-		echo '</div>';
-}
-else	
-{
-	echo "No Girls Found";
-}
-?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- header video -->
+
+	<div id="pg-17-0" class="panel-grid panel-has-style">
+		<div class="siteorigin-panels-stretch panel-row-style panel-row-style-for-17-0" data-stretch-type="full" style="margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; border-left: 0px; border-right: 0px;">
+			<div id="pgc-17-0-0" class="panel-grid-cell">
+				<div id="panel-17-0-0-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="0">
+					<div class="cover-video panel-widget-style panel-widget-style-for-17-0-0-0">
+						<div class="so-widget-sow-editor so-widget-sow-editor-base">
+							<div class="siteorigin-widget-tinymce textwidget">
+								<div class="men-voting header">
+									maine page
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- body panel -->
+
+</div> <!-- end pl-17 -->
+<?php if ( ! empty( $girlsUserQuery->results ) ) { ?>
+<?php } else { ?>
+	<div class="no-response-info">No Girls Found</div>
+<?php } ?>
+
 <!--div class="container">
 	<ul class="grid effect-3 customulgridclass" id="grid">
 		<li>
